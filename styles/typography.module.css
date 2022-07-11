@@ -1,0 +1,30 @@
+.lightTheme {
+  color: #000;
+  background-color: #FFF;
+}
+
+.darkTheme {
+  color: #FFF;
+  background-color: #000;
+}
+
+.pageTitle {
+  text-align: center;
+  text-shadow: '0.15rem 0.15rem 0.3rem black';
+  font-weight: 200;
+  font-size: '2.4rem';
+  line-height: '2.6rem';
+
+  @media (min-width:600px): {
+    font-size: '3.0rem';
+    line-height: '3.3rem';
+  }
+  @media (min-width:900px): {
+    font-size: '5.0rem';
+    line-height: '5.4rem';
+  }
+  @media (min-width:900px): {
+    font-size: '5.0rem';
+    line-height: '5.4rem';
+  }
+}
