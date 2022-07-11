@@ -3,7 +3,9 @@ import Image from 'next/image'
 import Link from 'next/link';
 
 import styles from '../styles/Home.module.css'
+import typography from '../styles/typography.module.css'
 
+import { Title } from "../components/text";
 
 export default function Home() {
   return (
@@ -19,6 +21,8 @@ export default function Home() {
         <h1 className={styles.title}>
           Welcome to Mastery Math
         </h1>
+        <Title text="Mastery"  />
+        <Title text="Math" gutterBottom />
 
         <Link href={`/next-welcome`}>
           <a>It's a NEXT app</a>
