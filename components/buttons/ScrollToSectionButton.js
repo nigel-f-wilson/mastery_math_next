@@ -33,7 +33,6 @@ export default function ScrollToSectionButton(props) {
           sx={{ border: border, height: '2.7rem', width: '90%'}}
         >
           <Typography 
-            children={label}
             color={fontColor}
             sx={{
               textTransform: 'none',
@@ -42,7 +41,9 @@ export default function ScrollToSectionButton(props) {
               fontSize: '1.4rem',
               lineHeight: '2.0rem',
             }}
-          />
+          >
+            {label}
+          </Typography>
         </Button>
       {/* </a> */}
     </Grid>

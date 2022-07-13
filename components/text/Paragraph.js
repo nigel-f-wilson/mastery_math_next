@@ -17,7 +17,6 @@ export default function Paragraph(props) {
 
   return (
     <Typography 
-      children={text}
       color={fontColor}
       fontFamily={fontFamily}
       align="justify" 
@@ -32,6 +31,8 @@ export default function Paragraph(props) {
         //   fontSize: '1.3rem',
         // },
       }}
-    />
+    >
+      {text}
+    </Typography>
   )
 }

@@ -45,13 +45,9 @@ export default function MenuDrawer(props) {
         bgcolor={bgColor}
       >
         <Box display='flex' justifyContent='end' height={`${navbarHeightPx}px`}   >
-          <IconButton 
-            onClick={toggleDrawer}
-            children={<FontAwesomeIcon icon={faTimes} color={fontColor} size='lg' />}
-            aria-controls="main-menu"
-            aria-haspopup="true"
-            sx={{ padding: 0 }}
-          />
+          <IconButton  onClick={toggleDrawer} aria-controls="main-menu" aria-haspopup="true" sx={{ padding: 0 }} >
+            <FontAwesomeIcon icon={faTimes} color={fontColor} size='lg' />
+          </IconButton>
         </Box>
 
         {/* <FlexRow height="80px" >
@@ -63,11 +59,11 @@ export default function MenuDrawer(props) {
           {isAuthenticated && ( <LogoutButton /> )}
         </FlexRow>   */}
 
-        <Typography variant='h3' children='About' />
+        <Typography variant='h3' >About</Typography>
 
-        <Typography variant='h3' children='Services' />
+        <Typography variant='h3' >Services</Typography>
         
-        <Typography variant='h3' children='Resources' />
+        <Typography variant='h3' >Resources</Typography>
 
         
         

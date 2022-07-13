@@ -21,7 +21,8 @@ export default function FlexRow(props) {
     display="flex"
     flexDirection="row"
     alignItems="center"
-    children={children}
-   />
+   >
+    {children}
+   </Box>
   )
 }
