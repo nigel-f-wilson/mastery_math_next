@@ -5,12 +5,12 @@ import "../../styles/lightDarkModeToggle.module.css";
 import { Box } from '@mui/material';
 
 import { SettingsContext } from '../../contexts';
-import { ButtonLabel } from "../buttons";
+import { ButtonLabel } from "../text";
 
 export default function LightDarkModeToggle(props) {
   const { colorTheme, toggleColorTheme } = useContext(SettingsContext)
   
-  let toggled = (colorTheme === "dark") ? true : false
+  let toggled = (colorTheme.name === "dark") ? true : false
   let label = (colorTheme === "dark") ? "Dark Theme" : "Light Theme"
 
   return (
