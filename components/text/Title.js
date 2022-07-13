@@ -13,11 +13,11 @@ export default function Title(props) {
     fontFamily = "Amatic SC"
   } = props
   
-  // const { colorTheme } = useContext(SettingsContext)
+  const { colorTheme } = useContext(SettingsContext)
+  const { fontColor } = colorTheme
 
+  console.log(`TITLE got Color Theme: ${JSON.stringify(colorTheme,null,4)}`);
 
-  // const fontColor = (colorTheme === "dark") ? "white" : "black"
-  const fontColor =  "black"
   
   const padding = (gutterBottom) ? "0 0 1rem" : "0"
 

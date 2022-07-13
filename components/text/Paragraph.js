@@ -11,6 +11,9 @@ export default function Paragraph(props) {
     gutterBottom = false
   } = props
 
+  const { colorTheme } = useContext(SettingsContext)
+  const { fontColor } = colorTheme
+
 
   return (
     <Typography 
