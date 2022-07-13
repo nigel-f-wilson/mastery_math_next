@@ -4,15 +4,15 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link';
 
-import styles from '../styles/Home.module.css'
+import styles from '../../styles/Home.module.css'
 
 // THIRD PARTY
 import { Box, Container } from '@mui/material';
 // ICONS
 
 // INTERNAL
-import { Title, Subtitle  } from "../components/text";
-import { PageBackground } from "../components/layout";
+import { Title, Subtitle  } from "../../components/text";
+import { PageBackground } from "../../components/layout";
 
 export default function Parents() {
   
