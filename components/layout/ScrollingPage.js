@@ -4,7 +4,7 @@ import React, { useContext } from 'react'
 import { Box } from '@mui/material';
 
 // INTERNAL
-import { ScrollToTopButton } from "../buttons";
+// import { ScrollToTopButton } from "../buttons";
 import { SettingsContext } from "../../contexts";
 
 export default function ScrollingPage(props) {
@@ -14,7 +14,7 @@ export default function ScrollingPage(props) {
   return (
     <Box bgcolor={bgColor} display="flex" flexDirection="column" alignItems="center" >
       {props.children}
-      <ScrollToTopButton />
+      {/* <ScrollToTopButton /> */}
     </Box>
   )
 }
