@@ -59,7 +59,7 @@ export default function Home() {
       </main>
       <footer className={styles.footer}>
         <Link href={`/next-welcome`}>
-          <a>It's a NEXT app</a>
+          <a>It&rsquo;s a NEXT app</a>
         </Link>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
@@ -78,8 +78,6 @@ export default function Home() {
 
 const TitleSection = (props) => {
   const { id, refs } = props
-  const { colorTheme } = React.useContext(SettingsContext)
-  const fontColor = (colorTheme === "dark") ? "white" : "black"
 
   return (
     <FullscreenLandingSection id={id} disableNavbarPadding >
@@ -140,6 +138,7 @@ const WhatSection = React.forwardRef((props, ref) => {
     </FullscreenLandingSection>
   )
 })
+WhatSection.displayName = "What_Section"
 
 const WhoSection = React.forwardRef((props, ref) => {
   const { id } = props
@@ -184,6 +183,8 @@ const WhoSection = React.forwardRef((props, ref) => {
     </FullscreenLandingSection>
   )
 })
+WhoSection.displayName = "Who_Section"
+
 
 const HowSection = React.forwardRef((props, ref) => {
   const { id } = props
@@ -232,6 +233,8 @@ const HowSection = React.forwardRef((props, ref) => {
     </FullscreenLandingSection>
   )
 })
+HowSection.displayName = "How_Section"
+
 
 const WhySection = React.forwardRef((props, ref) => {
   const { id } = props
@@ -260,6 +263,8 @@ const WhySection = React.forwardRef((props, ref) => {
     </div>
   )
 })
+WhySection.displayName = "Why_Section"
+
 
 function FullscreenLandingSection(props) {
   const { id, children, disableNavbarPadding } = props
