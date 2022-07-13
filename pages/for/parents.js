@@ -28,7 +28,7 @@ export default function Parents() {
         <Box >
           {/* <Navbar /> */}
           <PageBackground >
-            <FullscreenLandingSection id={id} disableNavbarPadding >
+            <FullscreenLandingSection  disableNavbarPadding >
               <Box pt={3} pb={4}  >
                 <Title text="For Parents"  gutterBottom />
                 <Subtitle text="in mental computation."  />

@@ -28,7 +28,7 @@ export default function Teachers() {
         <Box >
           {/* <Navbar /> */}
           <PageBackground >
-            <FullscreenLandingSection id={id} disableNavbarPadding >
+            <FullscreenLandingSection disableNavbarPadding >
               <Box pt={3} pb={4}  >
                 <Title text="For Teachers"  gutterBottom />
                 <Subtitle text="in mental computation."  />

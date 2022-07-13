@@ -28,7 +28,7 @@ export default function Contact() {
         <Box >
           {/* <Navbar /> */}
           <PageBackground >
-            <FullscreenLandingSection id={id} disableNavbarPadding >
+            <FullscreenLandingSection disableNavbarPadding >
               <Box pt={3} pb={4}  >
                 <Title text="Contact Us"  gutterBottom />
                 <Subtitle text="Your step-by-step guide"  />
