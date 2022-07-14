@@ -22,12 +22,10 @@ export default function MenuDrawer(props) {
   // const { isAuthenticated, user } = useAuth0()
   const isAuthenticated = false
   const user = undefined
+  const { navbarHeightPx } = useContext(LayoutContext)
 
   const { colorTheme } = useContext(SettingsContext)
-  const { navbarHeightPx } = useContext(LayoutContext)
-  
-  const fontColor = (colorTheme === "light") ? "black" : "white"
-  const bgColor = (colorTheme === "light") ? "lightGrey" : "darkGrey"
+  const { fontColor, bgAccentColor } = colorTheme
 
   return (
    <Drawer 
@@ -42,7 +40,7 @@ export default function MenuDrawer(props) {
         height='100vh' 
         paddingX='1rem'
         color={fontColor}
-        bgcolor={bgColor}
+        bgcolor={bgAccentColor}
       >
         <Box display='flex' justifyContent='end' height={`${navbarHeightPx}px`}   >
           <IconButton  onClick={toggleDrawer} aria-controls="main-menu" aria-haspopup="true" sx={{ padding: 0 }} >
