@@ -11,7 +11,7 @@ export default function LightDarkModeToggle(props) {
   const { colorTheme, toggleColorTheme } = useContext(SettingsContext)
   
   let toggled = (colorTheme.name === "dark") ? true : false
-  let label = (colorTheme === "dark") ? "Dark Theme" : "Light Theme"
+  let label = (colorTheme.name === "dark") ? "Dark Theme" : "Light Theme"
 
   return (
     <Box position='absolute' bottom='1.0rem' width='100%' display='flex' flexDirection='row' justifyContent='start' alignItems='center' >
@@ -29,7 +29,7 @@ export default function LightDarkModeToggle(props) {
           </div>
         </div>
       </Box>
-      <ButtonLabel text={label} />
+      <ButtonLabel label={label} />
     </Box>
   );
 }
