@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
+
+import { SettingsContext } from '../../contexts';
 
 // THIRD PARTY
 import { Typography } from '@mui/material';
@@ -8,6 +10,11 @@ import { Typography } from '@mui/material';
 
 export default function ButtonLabel(props) {
   const { label } = props
+
+  const { colorTheme } = useContext(SettingsContext)
+  const { fontColor } = colorTheme
+
+
   return (
     <Typography 
       color={fontColor}
