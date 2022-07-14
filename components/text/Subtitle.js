@@ -11,13 +11,10 @@ export default function Subtitle(props) {
   } = props
   
   const { colorTheme } = useContext(SettingsContext)
-
-  const padding = (gutterBottom) ? "0 0 1.0rem" : "0"
-
   const { fontColor } = colorTheme
-
   const fontWeight = (colorTheme.name === "dark") ? 400 : 700
 
+  const padding = (gutterBottom) ? "0 0 1.0rem" : "0"
 
   return (
     <Typography 

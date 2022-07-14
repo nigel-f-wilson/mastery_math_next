@@ -43,7 +43,7 @@ export default function Home() {
       
       <main className={styles.main}>
         <Box >
-          {/* <Navbar /> */}
+          <Navbar />
           <PageBackground >
             <TitleSection id='top' refs={refs} />
             <WhatSection id='what' ref={whatRef} />

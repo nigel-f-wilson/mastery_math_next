@@ -18,7 +18,7 @@ export const SettingsContextProvider = props => {
   const [colorTheme, setColorTheme] = useState(darkTheme)  // or {lightTheme}  
   function toggleColorTheme(event) {
     event.preventDefault()
-    setColorTheme((prev) => (prev === lightTheme) ? darkTheme : lightTheme)
+    setColorTheme((prev) => (prev.name === "light") ? darkTheme : lightTheme)
   }
   
   const settingsContext = {
