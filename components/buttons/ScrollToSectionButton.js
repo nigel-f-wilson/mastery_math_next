@@ -18,7 +18,7 @@ export default function ScrollToSectionButton(props) {
 
   const border = `solid ${fontColor} 1px`
   const faIcon = (<FontAwesomeIcon icon={faArrowCircleDown} color={fontColor} size='lg' />)
-  
+
   const handleScrollButtonClick = () => { refToScrollTo.current.scrollIntoView({ behavior: 'smooth' })}
 
   return (
@@ -26,9 +26,6 @@ export default function ScrollToSectionButton(props) {
       {/* <a href={to} > */}
         <Button 
           onClick={handleScrollButtonClick}
-          // href={to}
-          // ref={ref}
-          // component="a" 
           startIcon={faIcon}
           sx={{ border: border, height: '2.7rem', width: '90%'}}
         >
@@ -37,7 +34,6 @@ export default function ScrollToSectionButton(props) {
             sx={{
               textTransform: 'none',
               fontWeight: 400,
-              // letterSpacing: '2px',
               fontSize: '1.4rem',
               lineHeight: '2.0rem',
             }}
@@ -52,5 +48,10 @@ export default function ScrollToSectionButton(props) {
 }
 ScrollToSectionButton.propTypes = {
   label: PropTypes.string.isRequired,
-  refToScrollTo: PropTypes.node.isRequired
+  refToScrollTo: PropTypes.oneOfType([
+    // Either a function
+    PropTypes.func, 
+    // Or the instance of a DOM native element (see the note about SSR)
+    PropTypes.shape({ current: PropTypes.elementType })
+])
 }

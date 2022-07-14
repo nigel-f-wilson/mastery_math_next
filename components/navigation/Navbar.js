@@ -7,18 +7,18 @@ import { Box, AppBar , IconButton } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 
-// CUSTOM
+// INTERNAL
 import { SettingsContext, LayoutContext } from '../../contexts';
 import { MenuDrawer } from "./";
 
 export default function Navbar(props) {
   const [drawerOpen, setDrawerOpen] = useState(false)
 
-  const { colorTheme } = useContext(SettingsContext)
   const { navbarHeightPx } = useContext(LayoutContext)
 
-  const bgColor = (colorTheme === "dark") ? "darkGrey" : "lightGrey"
-  const fontColor = (colorTheme === "dark") ? "white" : "black"
+
+  const { colorTheme } = useContext(SettingsContext)
+  const { bgAccentColor, fontColor } = colorTheme
 
   const toggleDrawer = (event) => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
