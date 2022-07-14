@@ -21,11 +21,10 @@ export default function MenuDrawer(props) {
   // const { isAuthenticated, user } = useAuth0()
   const isAuthenticated = false
   const user = undefined
-  const { navbarHeightPx } = useContext(LayoutContext)
 
   const { navbarHeightPx } = useContext(LayoutContext)
   const { colorTheme } = useContext(SettingsContext)
-  const { fontColor, bgColor } = colorTheme
+  const { fontColor, bgAccentColor } = colorTheme
 
   return (
    <Drawer 
