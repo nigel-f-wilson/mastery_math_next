@@ -14,7 +14,6 @@ import { LightDarkModeToggle } from "./";
 // import { ProfileSummary } from '../auth';
 import { SettingsContext, LayoutContext } from '../../contexts';
 import { FlexRow } from "../layout";
-import { ButtonLabel } from '../buttons';
 
 export default function MenuDrawer(props) {
   const { drawerOpen, toggleDrawer } = props
@@ -23,11 +22,9 @@ export default function MenuDrawer(props) {
   const isAuthenticated = false
   const user = undefined
 
-  const { colorTheme } = useContext(SettingsContext)
   const { navbarHeightPx } = useContext(LayoutContext)
-  
-  const fontColor = (colorTheme === "light") ? "black" : "white"
-  const bgColor = (colorTheme === "light") ? "lightGrey" : "darkGrey"
+  const { colorTheme } = useContext(SettingsContext)
+  const { fontColor, bgColor } = colorTheme
 
   return (
    <Drawer 
