@@ -30,7 +30,7 @@ export default function Navbar(props) {
   return (
     <AppBar position='sticky' >
       <Box height={`${navbarHeightPx}px`} bgcolor={bgAccentColor} display='flex' justifyContent='end' alignItems='center' paddingX='0.5rem' >
-        <IconButton onClick={toggleDrawer} aria-controls="main-menu" aria-haspopup="true" >
+        <IconButton onClick={toggleDrawer} aria-controls="main-menu" aria-haspopup="true" sx={{ mr: 2 }} >
           <FontAwesomeIcon icon={faBars} color={fontColor} />
         </IconButton>
         <MenuDrawer 
